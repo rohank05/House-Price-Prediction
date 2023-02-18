@@ -15,7 +15,7 @@ def get_location():
     return response
 
 
-@app.route("/get_price")
+@app.route("/get_price", methods=["POST"])
 def get_price():
     sqft = float(request.json["sqft"])
     location = request.json["location"]
